@@ -17,7 +17,7 @@ function city(event) {
       let kyiv = document.querySelector("#kyiv");
       kyiv.innerHTML = city_name;
       let h1 = document.querySelector("#zaluzh");
-      h1.textContent = "It is " + response.data.main.temp + " degrees";
+      h1.textContent = "It is " + (response.data.main.temp -273,15) + " °C"
       let desc = document.querySelector("#clouds");
       desc.innerHTML =
         "The mood of the day is the following: " +
@@ -64,7 +64,7 @@ function getWeatherDataByCoords(lat, lon) {
       console.log(response.data.weather[0].description);
       let city_name = response.data.name;
       let h1 = document.querySelector("#zaluzh");
-      h1.textContent = "It is " + response.data.main.temp + " degrees";
+      h1.textContent = "It is " + (response.data.main.temp -273,15) + " °C";
       let kyiv = document.querySelector("#kyiv");
       kyiv.innerHTML = city_name;
       let desc = document.querySelector("#clouds");
