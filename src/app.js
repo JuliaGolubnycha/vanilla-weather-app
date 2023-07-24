@@ -17,7 +17,7 @@ function city(event) {
       let kyiv = document.querySelector("#kyiv");
       kyiv.innerHTML = city_name;
       let h1 = document.querySelector("#zaluzh");
-      h1.textContent = "It is " + (response.data.main.temp -273,15) + " °C"
+      h1.textContent = "It is " + response.data.main.temp + " degrees";
       let desc = document.querySelector("#clouds");
       desc.innerHTML =
         "The mood of the day is the following: " +
@@ -64,7 +64,7 @@ function getWeatherDataByCoords(lat, lon) {
       console.log(response.data.weather[0].description);
       let city_name = response.data.name;
       let h1 = document.querySelector("#zaluzh");
-      h1.textContent = "It is " + (response.data.main.temp -273,15) + " °C";
+      h1.textContent = "It is " + response.data.main.temp + " degrees";
       let kyiv = document.querySelector("#kyiv");
       kyiv.innerHTML = city_name;
       let desc = document.querySelector("#clouds");
@@ -75,7 +75,7 @@ function getWeatherDataByCoords(lat, lon) {
       humid.innerHTML = response.data.main.humidity + "%";
       let wind = document.querySelector("#wind");
       wind.innerHTML = response.data.wind.speed + " km/h";
-      let icon = document.querySelector("#icon");
+            let icon = document.querySelector("#icon");
       icon.setAttribute(
         "src",
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
