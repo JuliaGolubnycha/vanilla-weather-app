@@ -6,7 +6,7 @@ function city(event) {
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     city_name +
     "&appid=" +
-    apiKey;
+    apiKey + "&units=metric";
 
   axios
     .get(apiUrl)
@@ -17,7 +17,7 @@ function city(event) {
       let kyiv = document.querySelector("#kyiv");
       kyiv.innerHTML = city_name;
       let h1 = document.querySelector("#zaluzh");
-      h1.textContent = "It is " + response.data.main.temp + " degrees";
+      h1.textContent = Math.round(response.data.main.temp);
       let desc = document.querySelector("#clouds");
       desc.innerHTML =
         "The mood of the day is the following: " +
@@ -54,7 +54,7 @@ function getWeatherDataByCoords(lat, lon) {
     "&lon=" +
     lon +
     "&appid=" +
-    apiKey;
+    apiKey + "&units=metric";
 
   axios
     .get(weatherUrl)
@@ -64,7 +64,7 @@ function getWeatherDataByCoords(lat, lon) {
       console.log(response.data.weather[0].description);
       let city_name = response.data.name;
       let h1 = document.querySelector("#zaluzh");
-      h1.textContent = "It is " + response.data.main.temp + " degrees";
+      h1.textContent = Math.round(response.data.main.temp);
       let kyiv = document.querySelector("#kyiv");
       kyiv.innerHTML = city_name;
       let desc = document.querySelector("#clouds");
