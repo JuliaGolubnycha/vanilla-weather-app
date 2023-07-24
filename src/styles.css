@@ -1,0 +1,93 @@
+.body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5%;
+  box-shadow: 30px lightcyan;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  margin: 15px auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 48px;
+  color: darkgray;
+}
+
+.gradus{
+  font-size: 16px;
+  position: relative;
+  top: -11px;
+}
+
+.colgradus{
+  font-size: 16px;
+  position: relative;
+  top: -6px;
+}
+
+.bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bottom {
+  text-align: center;
+  margin: 0 auto;
+  color: green;
+  text-decoration: none;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.container .charsss {
+  font-size: 14px;
+  color: black;
+  margin: 0 auto;
+}
+
+.form-control {
+  margin: 0 auto;
+  border-radius: 0;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+ .btn.btn-info {
+  border-radius: 0;
+  display: inline-block;
+  color: yellow;
+}
+
+.container {
+  margin: 50px auto;
+}
+.container p {
+  text-align: center;
+  color: darkgray;
+  font-size: 24px;
+}
+
+.inform {
+  color: lightgreen;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#locate {
+  margin: 0 auto;
+  display: block;
+}
