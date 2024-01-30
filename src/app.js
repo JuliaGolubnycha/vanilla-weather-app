@@ -1,16 +1,16 @@
-function hello() {
-  alert("You should have finished this much earlier!!!!!!");
-}
+//unction hello() {
+ // alert("You should have finished this much earlier!!!!!!");
+//}
 
-let button = document.querySelector("#fahrenheit-link");
-button.addEventListener("click", hello);
+//let button = document.querySelector("#fahrenheit-link");
+//button.addEventListener("click", hello);
 
-function firstName() {
-if(nameFirst.length>0){
-  alert("Hello, " + nameFirst.trim() + "!");
-} else {
-  alert("Don't you have a name?!?!?!?");
-}}
+//function firstName() {
+//if(nameFirst.length>0){
+  //alert("Hello, " + nameFirst.trim() + "!");
+//} else {
+  //alert("Don't you have a name?!?!?!?");
+//}}
 
 function dateOfTheWeek(){
   let now = new Date();
@@ -18,9 +18,9 @@ function dateOfTheWeek(){
   let day = day_of_the_week[now.getDay()];
   alert(day);
 }
-let nameFirst = prompt("What do you to be your name in this example?");
-firstName(nameFirst);
-dateOfTheWeek();
+//let nameFirst = prompt("What do you to be your name in this example?");
+//firstName(nameFirst);
+//dateOfTheWeek();
 
 //function showFahrenheitTemperature(event) {
   //fahrenheitLink.removeEventListener("click", showFahrenheitTemperature);
@@ -35,62 +35,54 @@ dateOfTheWeek();
 //}
 
 
-
-
 //let fahrenheitLink = document.querySelector("#fahrenheit-link");
 //fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 
+function city(event) {
+  event.preventDefault();
+  let city_name = document.getElementById("search-input").value;
+  let apiKey = "ed238469f9b5e9d801834270e65449bc";
+  let apiUrl =
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    city_name +
+    "&appid=" +
+    apiKey +
+    "&units=metric";
 
-
-//function city(event) {
- // event.preventDefault();
-  //let city_name = document.getElementById("search-input").value;
-  //let apiKey = "ed238469f9b5e9d801834270e65449bc";
-  //let apiUrl =
-    //"https://api.openweathermap.org/data/2.5/weather?q=" +
-   // city_name +
-    //"&appid=" +
-   // apiKey +
-    //"&units=metric";
-
-
-
-
-  //axios
-    //.get(apiUrl)
-    //.then((response) => {
-      //console.log(response.data);
+  axios
+    .get(apiUrl)
+    .then((response) => {
+     // console.log(response.data);
       //console.log(response.data.main.temp);
       //console.log(response.data.weather[0].description);
-      //let kyiv = document.querySelector("#kyiv");
-     // kyiv.innerHTML = city_name.toUpperCase();
-     // let h1 = document.querySelector("#zaluzh");
-     // h1.textContent = Math.round(response.data.main.temp);
-     // let desc = document.querySelector("#clouds");
-     // desc.innerHTML =
-        //"The mood of the day is the following: " +
-        //response.data.weather[0].description;
-      //let humid = document.querySelector("#humid");
-     // humid.innerHTML = response.data.main.humidity + "%";
-      //let wind = document.querySelector("#wind");
-      //wind.innerHTML = response.data.wind.speed + " km/h";
-     // let icon = document.querySelector("#icon");
-    //  icon.setAttribute(
-      //  "src",
-      //  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    //  );
-  //  })
-  //  .catch((error) => {
-   //   console.log(error);
-   // });
-//}
+      let kyiv = document.querySelector("#kyiv");
+      let newCity = city_name.charAt(0).toUpperCase() + city_name.slice(1);
+      kyiv.innerHTML = newCity;
+      let h1 = document.querySelector("#zaluzh");
+      h1.textContent = Math.round(response.data.main.temp);
+      let desc = document.querySelector("#clouds");
+      desc.innerHTML =
+        "The mood of the day is the following: " +
+        response.data.weather[0].description;
+      let humid = document.querySelector("#humid");
+      humid.innerHTML = response.data.main.humidity + "%";
+      let wind = document.querySelector("#wind");
+      wind.innerHTML = response.data.wind.speed + " km/h";
+      let icon = document.querySelector("#icon");
+      icon.setAttribute(
+        "src",
+        `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 
-
-
-//let trig = document.querySelector("#search-button");
-//trig.addEventListener("click", city);
+let trig = document.querySelector("#search-button");
+trig.addEventListener("click", city);
 
 
 
