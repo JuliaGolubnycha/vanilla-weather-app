@@ -1,36 +1,75 @@
-.body {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid lightgray;
-  border-radius: 5%;
-  box-shadow: 30px lightcyan;
+body {
+  background-image: url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+
+
+
+.body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid whitesmoke;
+  border-radius: 5%;
+  box-shadow: 30px lightcyan;
+  background-color: rgba(47,79,79, 0.7);
+}
+
+
+
+
+.body1{
+  opacity: 100;
+  color: whitesmoke;
+}
+
+
+
+
 h1 {
-  color: black;
   text-align: center;
   margin: 15px auto;
 }
+
+
+
 
 h2 {
   text-align: center;
   margin: 20px auto;
   font-size: 48px;
-  color: darkgray;
+  color: whitesmoke;
 }
+
+.h2 h2{
+  color: whitesmoke;
+}
+
+
+
 
 .gradus{
   font-size: 16px;
   position: relative;
   top: -11px;
+  color: whitesmoke;
 }
+
+
+
 
 .colgradus{
   font-size: 16px;
   position: relative;
   top: -6px;
+  color: whitesmoke;
 }
+
+
+
 
 .bot {
   display: flex;
@@ -39,12 +78,18 @@ h2 {
   width: 100%;
 }
 
+
+
+
 .bottom {
   text-align: center;
   margin: 0 auto;
-  color: green;
+  color: darkgray;
   text-decoration: none;
 }
+
+
+
 
 .form-container {
   display: flex;
@@ -52,11 +97,17 @@ h2 {
   margin: 15px auto;
 }
 
+
+
+
 .container .charsss {
   font-size: 14px;
-  color: black;
+  color: whitesmoke;
   margin: 0 auto;
 }
+
+
+
 
 .form-control {
   margin: 0 auto;
@@ -65,29 +116,40 @@ h2 {
   margin-right: 5px;
 }
 
+
+
+
  .btn.btn-info {
-  border-radius: 0;
+  border: none;
   display: inline-block;
-  color: yellow;
+  color: whitesmoke;
+  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
 }
+
+
+
 
 .container {
   margin: 50px auto;
 }
 .container p {
   text-align: center;
-  color: darkgray;
+  color: whitesmoke;
   font-size: 24px;
 }
 
 .inform {
-  color: lightgreen;
+  color: whitesmoke;
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
+
+
+
 #locate {
   margin: 0 auto;
   display: block;
 }
+
