@@ -109,7 +109,7 @@ celsiusLink.addEventListener("click", backToCelsius);
 function locating(){
   let apiKey = "ed238469f9b5e9d801834270e65449bc";
   let city_name = document.getElementById("search-input").value;
-  let apiUrl="http://api.openweathermap.org/geo/1.0/direct?q="+city_name+"&limit="+1+"&appid="+apiKey;
+  let apiUrl="https://api.openweathermap.org/geo/1.0/direct?q="+city_name+"&limit="+1+"&appid="+apiKey;
   axios
   .get(apiUrl)
   .then((response)=>{
@@ -125,7 +125,7 @@ function locating(){
 
 function forecast(lat, lon){
   let apiKey = "ed238469f9b5e9d801834270e65449bc";
-  let apiUrl="http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid="+apiKey;
+  let apiUrl="https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid="+apiKey;
   axios
   .get(apiUrl)
   .then((response) => {
