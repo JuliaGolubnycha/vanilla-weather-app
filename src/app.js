@@ -19,15 +19,15 @@ function dateOfTheWeek(){
   let now = new Date();
   let day_of_the_week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   let first = document.querySelector("#dotwsun");
-  first.innerHTML = day_of_the_week[now.getDay()+1];
+  first.innerHTML = day_of_the_week[(now.getDay()+1) % 7];
   let second = document.querySelector("#dotwmon");
-  second.innerHTML = day_of_the_week[now.getDay()+2];
+  second.innerHTML = day_of_the_week[(now.getDay()+2) % 7];
   let third = document.querySelector("#dotwtue");
-  third.innerHTML = day_of_the_week[now.getDay()+3];
+  third.innerHTML = day_of_the_week[(now.getDay()+3) % 7];
   let fourth = document.querySelector("#dotwwed");
-  fourth.innerHTML = day_of_the_week[now.getDay()+4];
+  fourth.innerHTML = day_of_the_week[(now.getDay()+4) % 7];
   let fifth = document.querySelector("#dotwthur");
-  fifth.innerHTML = day_of_the_week[now.getDay()+5];
+  fifth.innerHTML = day_of_the_week[(now.getDay()+5) % 7];
 }
 
 dateOfTheWeek();
